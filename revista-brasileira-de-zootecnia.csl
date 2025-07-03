@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0">
+  <!-- This style was edited with the Visual CSL Editor (https://editor.citationstyles.org/visualEditor/) -->
+  <info>
+    <title>Revista Brasileira de Zootecnia (adaptado)</title>
+    <id>http://www.zotero.org/styles/revista-brasileira-de-zootecnia</id>
+    <link href="http://www.zotero.org/styles/revista-brasileira-de-zootecnia" rel="self"/>
+    <author>
+      <name>Adaptado por ChatGPT</name>
+    </author>
+    <category citation-format="author-date"/>
+    <summary>Estilo baseado no APA 6ª edição, adaptado conforme o padrão da Revista Brasileira de Zootecnia</summary>
+    <updated>2025-06-27T12:56:19+00:00</updated>
+  </info>
+  <macro name="author">
+    <names variable="author">
+      <name and="text" delimiter="; " name-as-sort-order="all" initialize-with=". "/>
+      <label form="short" prefix=", " text-case="lowercase"/>
+    </names>
+  </macro>
+  <macro name="issued">
+    <date variable="issued">
+      <date-part name="year"/>
+    </date>
+  </macro>
+  <macro name="title">
+    <text variable="title" text-case="sentence"/>
+  </macro>
+  <macro name="container-title">
+    <text variable="container-title" font-style="italic"/>
+  </macro>
+  <macro name="volume-issue">
+    <group delimiter=", ">
+      <text variable="volume" font-style="italic"/>
+      <text variable="issue" prefix="(" suffix=")"/>
+    </group>
+  </macro>
+  <citation>
+    <sort>
+      <key variable="author"/>
+      <key variable="issued"/>
+    </sort>
+    <layout prefix="(" suffix=")" delimiter="; ">
+      <text macro="author"/>
+      <text macro="issued" prefix=" "/>
+    </layout>
+  </citation>
+  <bibliography hanging-indent="true" line-spacing="2">
+    <sort>
+      <key macro="author"/>
+      <key variable="issued"/>
+    </sort>
+    <layout>
+      <text macro="author"/>
+      <text macro="issued" prefix=" (" suffix="). "/>
+      <text macro="title" suffix=". "/>
+      <text macro="container-title" suffix=", "/>
+      <text macro="volume-issue" suffix=": "/>
+      <text variable="page"/>
+      <text variable="DOI" prefix=". https://doi.org/"/>
+    </layout>
+  </bibliography>
+</style>
